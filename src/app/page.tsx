@@ -60,26 +60,11 @@ function NavBar() {
           />
         </div>
         <div className="nmenu">
-          {/* <Nav1 active={ scrollY + screenHeight >= screenHeight * 1 && scrollY < screenHeight * 1? true : false }
-            click={() => {window.scrollTo(0, 0);}} />
-
-          <Nav2 active={ scrollY + screenHeight >= screenHeight * 2 && scrollY < screenHeight * 2? true : false }
-            click={() => {window.scrollTo(0, screenHeight * 1);}} />
-
-          <Nav3 active={ scrollY + screenHeight >= screenHeight * 3 && scrollY < screenHeight * 3? true : false }
-            click={() => {window.scrollTo(0, screenHeight * 2);}} />
-
-          <Nav4 active={ scrollY + screenHeight >= screenHeight * 4 && scrollY < screenHeight * 4? true : false }
-            click={() => {window.scrollTo(0, screenHeight * 3);}} />
-
-          <Nav5 active={ scrollY + screenHeight >= screenHeight * 5 && scrollY < screenHeight * 5? true : false }
-            click={() => {window.scrollTo(0, screenHeight * 4);}} /> */}
-            <Nav1 active={scrollY < screenHeight} click={() => {window.scrollTo(0, 0);}} />
-<Nav2 active={scrollY >= screenHeight && scrollY < screenHeight * 2} click={() => {window.scrollTo(0, screenHeight);}} />
-<Nav3 active={scrollY >= screenHeight * 2 && scrollY < screenHeight * 3} click={() => {window.scrollTo(0, screenHeight * 2);}} />
-<Nav4 active={scrollY >= screenHeight * 3 && scrollY < screenHeight * 4} click={() => {window.scrollTo(0, screenHeight * 3);}} />
-<Nav5 active={scrollY >= screenHeight * 4} click={() => {window.scrollTo(0, screenHeight * 4);}} />
-
+          <Nav1 active={scrollY < screenHeight} click={() => {window.scrollTo(0, 0);}} />
+          <Nav2 active={scrollY >= screenHeight && scrollY < screenHeight * 2} click={() => {window.scrollTo(0, screenHeight);}} />
+          <Nav3 active={scrollY >= screenHeight * 2 && scrollY < screenHeight * 3} click={() => {window.scrollTo(0, screenHeight * 2);}} />
+          <Nav4 active={scrollY >= screenHeight * 3 && scrollY < screenHeight * 4} click={() => {window.scrollTo(0, screenHeight * 3);}} />
+          <Nav5 active={scrollY >= screenHeight * 4} click={() => {window.scrollTo(0, screenHeight * 4);}} />
         </div>
       </div>
     </nav>
@@ -161,7 +146,7 @@ function Home() {
       <div className="hkiri">
         <div className="hd_nama">
           <div className={`hd_hi ${poppins.className}`}>
-            <span>hi everyone! I'm</span>
+            <span>hi everyone! I am</span>
           </div>
           <div className="hd_muh">
             <div className={`muhammad ${poppins.className}`}>
@@ -819,36 +804,3 @@ function Contact() {
     </div>
   );
 }
-
-// function Sidenav(){
-//     const [scrollY, setScrollY] = useState(0);
-//     const [screenHeight, setScreenHeight] = useState(0);
-
-//     useEffect(() => {
-//         const handleScroll = () => {
-//             setScrollY(window.scrollY);
-//             setScreenHeight(window.innerHeight);
-//         };
-
-//         handleScroll();
-
-//         window.addEventListener("scroll", handleScroll);
-//         return () => {
-//             window.removeEventListener("scroll", handleScroll);
-//         };
-//     }, []);
-
-//     return <div className="h-screen w-16 bg-white fixed md:flex items-center justify-center hidden">
-//         <div className="flex gap-1 flex-col">
-//             <Dot active={scrollY + screenHeight >= screenHeight * 1 && scrollY < screenHeight * 1 ? true : false} click={() => {window.scrollTo(0, 0)}}/>
-//             <Dot active={scrollY + screenHeight >= screenHeight * 2 && scrollY < screenHeight * 2 ? true : false} click={() => {window.scrollTo(0, screenHeight * 1)}}/>
-//             <Dot active={scrollY + screenHeight >= screenHeight * 3 && scrollY < screenHeight * 3 ? true : false} click={() => {window.scrollTo(0, screenHeight * 2)}}/>
-//             <Dot active={scrollY + screenHeight >= screenHeight * 4 && scrollY < screenHeight * 4 ? true : false} click={() => {window.scrollTo(0, screenHeight * 3)}}/>
-//         </div>
-//     </div>
-// }
-
-// function Dot(props: {active: boolean; click?: () => void}){
-//   return <div className={`w-4 h-4 rounded-full 
-//     ${props.active ? "bg-orange-500 border-none" : "bg-white border-2 border-black"}`} onClick={props.click}></div>
-// }
